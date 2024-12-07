@@ -5,6 +5,7 @@ import { v2 as cloudinary } from "cloudinary";
 import { generateToken } from "../utils/jwtToken.js";
 
 export const register = catchAsyncErrors(async (req, res, next) => {
+
     if (!req.files || Object.keys(req.files).length === 0) { //if requests mein file nhi hui ya phir file toh hai pr usme object ki length 0 hai toh 
 
         return next(new ErrorHandler("Profile Image Required", 400));
@@ -79,4 +80,46 @@ export const register = catchAsyncErrors(async (req, res, next) => {
     // });
 
     generateToken(user, "User registered successfully", 201, res);
+});
+
+export const login = catchAsyncErrors(async(req,res,next)=>{
+
+    const {emailaddress, password} = req.body;
+
+    if(!emailaddress || !password){
+    return next(new ErrorHandler("Please fill all details", 400));
+    }
+
+    //Does user exist for this email
+    const user = await User.findOne({emailaddress}).select("+password");
+    if(!user) {
+        return next(new ErrorHandler("Invalid Credentials", 400));
+    }
+
+    // Email shi hai ab password match krna hai
+    const isPasswordMatched = await user.comparePassword(password);
+    if(!isPasswordMatched) {
+        return next(new ErrorHandler("Wrong Password", 400));
+    }
+
+    // Now user logged in successfully toh token generate karado
+    generateToken(user, "Logged in successfully", 200, res);
+});
+
+export const logout = catchAsyncErrors(async(req,res,next)=>{
+    res.status(200).cookie("token", "", {
+        expires : new Date(Date.now()),
+        httpOnly : true,
+    }).json({
+        success : true,
+        message : "Logged out successfully"
+    })
+});
+
+export const getProfile = catchAsyncErrors(async(req,res,next)=>{
+    const user = req.user;
+    res.status(200).json({
+        success : true,
+        user
+    });
 });

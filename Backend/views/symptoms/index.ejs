@@ -1,0 +1,18 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+    Here we will show your symptom based solutions
+
+    <div class=" solution-card-container row row-cols-lg-6 row-col-md-4 row-col-sm-2">
+        <% for(let symptom of allSymptoms) { %>
+            <a class="symptom-title-link" href="/symptoms/<%=symptom._id %>">
+            <div class="card symptom-card" style="width: 10rem;">
+                <img src="<%= symptom.image %>" class="card-img-top" alt="symptom-image">
+                <div class="card-body">
+                  <p class="card-text"><%= symptom.symptom %></p>
+                </div>
+              </div>
+              </a>
+              <% } %>
+    </div>
+    
+</body>

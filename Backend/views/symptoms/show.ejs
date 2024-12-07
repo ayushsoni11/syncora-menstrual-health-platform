@@ -1,0 +1,84 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <h2 class="sol-heading">Solution for <%= symptom.symptom %> </h2>
+
+    <!-- Yoga Section -->
+    <h3>Yoga Exercises</h3>
+    <ul class="ul-box">
+        <% symptom.solutions.yoga.forEach((exercise) => { %>
+            <li class="li-box">
+                <h4><%= exercise.name %></h4>
+                <p><strong>Benefits:</strong> <%= exercise.benefits.join(", ") %></p>
+                <p><strong>How to Do:</strong> <%= exercise.howToDo %></p>
+                <p><strong>When to Do:</strong> <%= exercise.whenToDo || "Anytime" %></p>
+                <img src="<%= exercise.image %>" alt="<%= exercise.name %> image" width="200">
+            </li>
+        <% }) %>
+    </ul>
+
+    <!-- Diet Section -->
+    <h3>Diet Suggestions</h3>
+    <h4>Foods to Eat:</h4>
+    <ul class="ul-box">
+        <% symptom.solutions.diet.eat.forEach((item) => { %>
+            <li class="li-box">
+                <p><strong>Food:</strong> <%= item.item %></p>
+                <p><strong>Benefits:</strong> <%= item.benefits.join(", ") %></p>
+                <p><strong>Recommended Quantity:</strong> <%= item.quantity || "As per need" %></p>
+                <img src="<%= item.image %>" alt="<%= item.item %> image" width="200">
+            </li>
+        <% }) %>
+    </ul>
+
+    <h4>Foods to Avoid:</h4>
+    <ul class="ul-box">
+        <% symptom.solutions.diet.avoid.forEach((item) => { %>
+            <li class="li-box">
+                <p><strong>Food:</strong> <%= item.item %></p>
+                <p><strong>Reasons to Avoid:</strong> <%= item.reasons.join(", ") %></p>
+                <img src="<%= item.image %>" alt="<%= item.item %> image" width="200">
+            </li>
+        <% }) %>
+    </ul>
+
+    <!-- Home Remedies Section -->
+    <h3>Home Remedies</h3>
+    <ul class="ul-box">
+        <% symptom.solutions.homeRemedies.forEach((remedy) => { %>
+            <li class="li-box">
+                <p><strong>Remedy:</strong> <%= remedy.remedy %></p>
+                <p><strong>Ingredients:</strong> <%= remedy.ingredients.join(", ") %></p>
+                <p><strong>Preparation:</strong> <%= remedy.preparation %></p>
+                <p><strong>Benefits:</strong> <%= remedy.benefits.join(", ") %></p>
+                <img src="<%= remedy.image %>" alt="<%= remedy.remedy %> image" width="200">
+            </li>
+        <% }) %>
+    </ul>
+
+    <!-- OTC Medications Section -->
+    <h3>OTC Medications</h3>
+    <ul class="ul-box">
+        <% symptom.solutions.otcMedications.forEach((medication) => { %>
+            <li class="li-box">
+                <p><strong>Medication:</strong> <%= medication.name %></p>
+                <p><strong>Usage:</strong> <%= medication.usage %></p>
+                <p><strong>Side Effects:</strong> <%= medication.sideEffects.join(", ") %></p>
+                <img src="<%= medication.image %>" alt="<%= medication.name %> image" width="200">
+            </li>
+        <% }) %>
+    </ul>
+
+    <!-- Herbal Treatments Section -->
+    <h3>Herbal Treatments</h3>
+    <ul class="ul-box">
+        <% symptom.solutions.herbalTreatments.forEach((herb) => { %>
+            <li class="li-box">
+                <p><strong>Herb:</strong> <%= herb.herb %></p>
+                <p><strong>Benefits:</strong> <%= herb.benefits.join(", ") %></p>
+                <p><strong>Preparation:</strong> <%= herb.preparation || "Use as instructed" %></p>
+                <p><strong>Precautions:</strong> <%= herb.precautions.join(", ") %></p>
+                <img src="<%= herb.image %>" alt="<%= herb.herb %> image" width="200">
+            </li>
+        <% }) %>
+    </ul>
+</body>
