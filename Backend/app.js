@@ -56,14 +56,22 @@ config ({
     path : "./config/config.env",
 });
 
-app.get('/', (req,res)=>{
-    res.send("Hi , I am root")
+app.get('/', (req, res) => {
+    res.render("intro")
+});
+
+app.get('/home', (req, res) => {
+    res.render("home")
+});
+
+app.get('/readmore', (req, res) => {
+    res.render("readmore");
 });
 
 app.get('/symptoms', async (req, res) => {
     try {
         const allSymptoms = await SymptomSolution.find({});
-        res.render("symptoms/index", { allSymptoms }); // Correct usage
+        res.render("symptoms/symptom", { allSymptoms }); // Correct usage
     } catch (error) {
         console.error(error);
         res.status(500).send("Server Error");

@@ -1,0 +1,193 @@
+/* symptom.ejs css */
+
+*{
+    margin : 0;
+    padding: 0;
+    outline : none;
+    text-decoration : none;
+    box-sizing : border-box
+}
+
+:root {
+    --bgpurple: #ac7cf4;
+    --bgpurple2 : rgba(224, 52, 227, 0.667);
+    --bgpink: #F8E7FC;
+    --textblack: rgb(10, 10, 10);
+    --textpurple: purple;
+    --textwhite: white;
+    --text-font: "Outfit", sans-serif;
+}
+
+.solution-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+
+.symptom-card {
+    border: none !important;
+    color: var(--textwhite) !important;
+
+}
+
+.symptom-title-link {
+    text-decoration: none;
+}
+
+
+/* show.ejs page */
+
+.aside{
+    background : linear-gradient(67deg, #ac7cf4, rgba(224, 52, 227, 0.667))!important;
+    width: 20vw !important;
+    position: fixed;
+    left : 0;
+    right : 0;
+    height : 100%;
+    display : flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap : 3rem;
+    z-index : 10;
+    border-right : 1px solid var(--textblack);
+
+}
+.aside .solutions{
+    font-size : 40px;
+    
+    padding-top : 15px;
+}
+
+.aside .nav{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size : 16px;
+    gap : 3rem;
+}
+
+.aside .nav li{
+    /* background-color: red; */
+    padding : 15px;
+    display: flex;
+    flex-direction: row;
+    width : 20vw;
+    
+}
+
+.aside .nav li a:hover{
+   color : rgba(36, 6, 28, 0.21);
+}
+
+.aside .nav li a{
+    font-size : 20px;
+    text-decoration: none;
+    color : var(--textblack)
+    
+}
+
+.aside .nav li a i{
+    /* background-color: green; */
+    font-size : 30px;
+    margin-right: 10px;
+}
+
+.main-content{
+    /* background-color: black; */
+    width : 91vw;
+    display : flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left : 220px;
+    gap : 2rem;
+
+}
+
+.main-content .sol-heading{
+    font-size: 70px;
+    color: var(--textpurple);
+    margin-top : 20px;
+}
+
+.main-content #remedies, #medicine, #herbal, #diet{
+    padding-top : 120px;
+    /* background-color: red; */
+    width: 98%;
+}
+
+.main-content #yoga{
+    padding-top : 100px;
+    /* background-color: red; */
+    width: 98%;
+}
+.section {
+    background : linear-gradient(67deg , #ac7cf4, #F8E7FC);
+    width: 100%;
+    box-shadow: 0 0 20px rgb(177, 175, 177);
+    border-radius: 10px;
+    margin-bottom : 30px;
+}
+
+.section h3{
+    color : var(--textpurple);
+    font-size : 40px;
+    background-color: rgb(143, 19, 116);
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid purple;
+    color : white;
+    
+}
+
+.padd-15{
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+section .ul-box {
+    /* background-color: red; */
+    list-style-type: "⭐";
+
+}
+
+section .li-box{
+    /* background-color: blue; */
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+section .li-box .content-box{
+    /* background-color: red; */
+    width : 80%;
+    margin-bottom : 10px;
+}
+
+section .li-box .img-box{
+    align-items: center;
+    width : 40%;
+    /* background-color: green; */
+    display : flex;
+    justify-content: center;
+    margin-bottom : 10px;
+}
+
+section .li-box h4{
+    color : var(--textpurple);
+    margin-bottom : 10px;
+}
+
+section .li-box p{
+    font-size: 16px;
+}
+
+section .li-box p strong {
+    font-size : 16px !important;
+    /* background-color: yellow; */
+}
+
+

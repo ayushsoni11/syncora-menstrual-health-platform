@@ -2,6 +2,11 @@ import mongoose from 'mongoose';
 
 const symptomSolutionSchema = new mongoose.Schema({
     symptom: { type: String, required: true },
+    image:{
+        type:String,
+        default : "https://i.pinimg.com/736x/b5/e7/db/b5e7db619ad464cc016acc8be5edf6c4.jpg",
+        set: (v)=> v==="" ? "https://i.pinimg.com/736x/b5/e7/db/b5e7db619ad464cc016acc8be5edf6c4.jpg": v,
+    },
     solutions: {
         yoga: [
             {

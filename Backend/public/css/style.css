@@ -73,34 +73,14 @@ body {
 
 /* Symptom based solutions page */
 
-.solution-card-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 20px;
-}
 
-.symptom-card {
-    border: none !important;
-    border-radius: 30% !important;
-    color: var(--textwhite) !important;
 
-}
-
-.symptom-card:hover {
-    background-color: red !important;
-}
-
-.symptom-title-link {
-    text-decoration: none;
-}
-
-/* read more ejs template page */
+/* read more ejs template page
 .content {
     width: 100vw;
     height: 100vh;
     overflow: hidden scroll;
-}
+} */
 
 
 /* Register.ejs page */
@@ -184,7 +164,7 @@ body {
 
 /* Symptom-show.ejs */
 
-.sol-heading {
+/* .sol-heading {
     font-size : 30px;
     color : var(--textpurple);
     display: flex;
@@ -206,4 +186,7 @@ body {
     border-radius: 30px;
     list-style-type: none;
 
-}
+} */
+
+
+
