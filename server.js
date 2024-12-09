@@ -1,5 +1,8 @@
 import  app from "./app.js"
 import cloudinary from "cloudinary";
+import http from 'http';
+
+const server = http.createServer(app);
 
 cloudinary.v2.config({
     cloud_name : process.env.CLOUDINARY_CLOUD_NAME,
