@@ -155,8 +155,14 @@ section {
 .articles-section .container {
 
     align-items: center;
-    text-align: center;
+    
 
+}
+
+.container h2{
+    font-size : 40px !important;
+    color : var(--textpurple);
+    text-align: center;
 }
 
 .articles-section .container .card-container {
@@ -216,11 +222,6 @@ section {
     border-radius: 10px;
 }
 
-.questions-section h2 {
-    font-size: 2rem;
-    text-align: center;
-    color: #ff6f61;
-}
 
 .question {
     background-color: white;
@@ -228,7 +229,17 @@ section {
     margin-bottom: 15px;
     padding: 15px;
 }
+.question p {
+    width : 100% !important;
+}
 
+.question p a{
+    width : 100% !important;
+    background-color: var(--textpurple) !important;
+    font-size: 20px;
+    color : var(--textwhite) !important;
+}
+/* 
 .question h4 {
     font-size: 1.2rem;
     color: #333;
@@ -237,7 +248,7 @@ section {
 .question p {
     font-size: 1rem;
     color: #555;
-}
+} */
 
 .fact-myth-section {
     background-color: #f9f9f9;

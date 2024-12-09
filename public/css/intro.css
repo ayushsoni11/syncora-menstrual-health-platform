@@ -30,6 +30,7 @@ body {
     align-items: center;
     padding: 20px;
     position: fixed;
+    position: relative;
     z-index: 1;
 
 }
@@ -39,18 +40,37 @@ body {
     
 }
 
-.buttons button {
-    padding: 8px;
-    width: 5.5rem;
-    background-color: var(--bgpink);
-    border: 1px solid purple;
-    font-size: 14px;
-    color: var(--textpurple);
-    border-radius: 20px;
-    font-family: var(--text-font);
-    font-weight: 500;
-    cursor : pointer;
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the buttons */
+    
 }
+
+.login-button, .register-button, .explore-button {
+    background-color:  var(--bgpink); /* Base button color */
+    color: var(--textpurple);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth animations */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+.login-button:hover, .register-button:hover , .explore-button:hover{
+    background-color: var(--textpurple); /* Darker shade on hover */
+    color : var(--bgpink);
+  
+    transform : scale(1.1,1.1); /* Lift effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
 
 
 /* Main Hero Section */
@@ -66,7 +86,7 @@ body {
     padding-bottom: 5rem;
     gap: 2rem;
     opacity: 80%;
-    height: 80vh;
+    height: 66vh;
     width: 97%;
 }
 
@@ -95,20 +115,6 @@ body {
     font-size: 30px;
 }
 
-.explore-button {
-    background-color: #F8E7FC;
-    color: var(--textpurple);
-    padding: 10px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 20px;
-    margin-bottom: 2rem;
-    font-weight: bold;
-    width: 150px;
-}
-
 .hero .intro-image {
     margin-top: 130px;
     width : 30rem;
@@ -119,13 +125,11 @@ body {
     width: 30rem;
     /* height: 35rem; */
     object-fit: cover;
+    /* transition: all 0.3s ease-in-out; */
 }
 
-/* Hover effect */
-.explore-button:hover {
-    background-color: var(--bgpurple);
-    color: var(--textblack);
-    /* Change this to a darker shade for hover effect */
+.intro-image .girl-image:hover{
+    /* transform: scale(1.1,1.1); */
 }
 
 @media (max-width: 768px) {
