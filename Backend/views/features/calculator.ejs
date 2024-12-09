@@ -1,0 +1,162 @@
+<% layout("/layouts/boilerplate") -%>
+    <link rel="stylesheet" href="/css/calculator.css">
+
+
+    <body>
+        <div class="row mb-3">
+            <div class="col-6 offset-3 form">
+                <h1 class="col-8 offset-3">Period Calculator</h1>
+
+            <form id="period-form" action="">
+                <div class="mb-3">
+                    <label class="form-label" for="start-date">Period Start Date:</label>
+                    <input class="form-control" type="date" id="start-date" name="start_date" required>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-6">
+                        <label  for="cycle-length"
+                            class="input form-label col pregnancy-calculator,period-calculator,ovulation-calculator,due-date-calculator">
+                            <p class="input__title">Average Cycle Length</p>
+                            <div class="dropdown-wrapper">
+                                <div class="input-field row " tabindex="0">
+                                    <select name="cycle_length" id="cycle-length" class="input-field__text form-control"
+                                        onchange="toggleRelatedInputs(this)" required>
+                                        <option value="22 days">
+                                            22 days
+                                        </option>
+                                        <option value="23 days">
+                                            23 days
+                                        </option>
+                                        <option value="24 days">
+                                            24 days
+                                        </option>
+                                        <option value="25 days">
+                                            25 days
+                                        </option>
+                                        <option value="26 days">
+                                            26 days
+                                        </option>
+                                        <option value="27 days">
+                                            27 days
+                                        </option>
+                                        <option value="28 days" selected>
+                                            28 days
+                                        </option>
+                                        <option value="29 days">
+                                            29 days
+                                        </option>
+                                        <option value="30 days">
+                                            30 days
+                                        </option>
+                                        <option value="31 days">
+                                            31 days
+                                        </option>
+                                        <option value="32 days">
+                                            32 days
+                                        </option>
+                                        <option value="33 days">
+                                            33 days
+                                        </option>
+                                        <option value="34 days">
+                                            34 days
+                                        </option>
+                                        <option value="35 days">
+                                            35 days
+                                        </option>
+                                        <option value="36 days">
+                                            36 days
+                                        </option>
+                                        <option value="37 days">
+                                            37 days
+                                        </option>
+                                        <option value="38 days">
+                                            38 days
+                                        </option>
+                                        <option value="39 days">
+                                            39 days
+                                        </option>
+                                        <option value="40 days">
+                                            40 days
+                                        </option>
+                                        <option value="41 days">
+                                            41 days
+                                        </option>
+                                        <option value="42 days">
+                                            42 days
+                                        </option>
+                                        <option value="43 days">
+                                            43 days
+                                        </option>
+                                        <option value="44 days">
+                                            44 days
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+    
+                    <div class="mb-3 col-6">
+                        <label for="period-duration"
+                            class="input form-label col pregnancy-calculator,period-calculator,ovulation-calculator,due-date-calculator">
+                            <p class="input__title">Last Period Length</p>
+                            <div class="dropdown-wrapper">
+                                <div class="input-field row " tabindex="0">
+                                    <select class="input-field__text form-control" name="period_duration"
+                                        onchange="toggleRelatedInputs(this)" id="period-duration" required>
+                                        <option value="1 day">
+                                            1 day
+                                        </option>
+                                        <option value="2 days">
+                                            2 days
+                                        </option>
+                                        <option value="3 days">
+                                            3 days
+                                        </option>
+                                        <option value="4 days">
+                                            4 days
+                                        </option>
+                                        <option value="5 days" selected>
+                                            5 days
+                                        </option>
+                                        <option value="6 days">
+                                            6 days
+                                        </option>
+                                        <option value="7 days">
+                                            7 days
+                                        </option>
+                                        <option value="8 days">
+                                            8 days
+                                        </option>
+                                        <option value="9 days">
+                                            9 days
+                                        </option>
+                                        <option value="10 days">
+                                            10 days
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+
+                <button type="button" id="calculate-button" class="btn btn-dark mb-3">Calculate</button>
+                
+            </form>
+            </div>
+        </div>
+
+
+
+        <div id="calendars">
+            <div id="result-1" class="calendar"></div>
+            <div id="result-2" class="calendar"></div>
+            <div id="result-3" class="calendar"></div>
+        </div>
+
+        <script src="/js/calculator.js"></script>
+    </body>
+    <!-- </html> -->

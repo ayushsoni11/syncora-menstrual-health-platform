@@ -50,11 +50,11 @@ age : {
 profileImage: {
     public_id: { // public id and url will come from cloudinary
         type: String,
-        required : true,
+        // required : true,
     },
     url: {
         type: String,
-        required : true,
+        // required : true,
     },
 },
 

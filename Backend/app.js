@@ -44,6 +44,8 @@ app.use(
 
 app.use('/api/v1/user', userRoute);
 
+app.use('/', userRoute);
+
 app.set("view engine", 'ejs');
 app.set("views", path.join(__dirname, "views"));
 
@@ -68,10 +70,22 @@ app.get('/readmore', (req, res) => {
     res.render("readmore");
 });
 
+app.get('/period-calculator', (req,res)=>{
+    res.render('features/calculator')
+});
+
+app.get('/services', (req,res)=>{
+    res.render('readmore');
+})
+
+app.get('/education', (req,res)=>{
+    res.render('features/education');
+})
+
 app.get('/symptoms', async (req, res) => {
     try {
         const allSymptoms = await SymptomSolution.find({});
-        res.render("symptoms/symptom", { allSymptoms }); // Correct usage
+        res.render("features/symptom", { allSymptoms }); // Correct usage
     } catch (error) {
         console.error(error);
         res.status(500).send("Server Error");
@@ -82,7 +96,7 @@ app.get("/symptoms/:id", async (req, res) => {
     console.log("under get request");
     let { id } = req.params;
     const symptom = await SymptomSolution.findById(id);
-    res.render("symptoms/show", { symptom });
+    res.render("features/show", { symptom });
 });
 
 

@@ -6,21 +6,21 @@ import { generateToken } from "../utils/jwtToken.js";
 
 export const register = catchAsyncErrors(async (req, res, next) => {
 
-    if (!req.files || Object.keys(req.files).length === 0) { //if requests mein file nhi hui ya phir file toh hai pr usme object ki length 0 hai toh 
+    try{// if (!req.files || Object.keys(req.files).length === 0) { //if requests mein file nhi hui ya phir file toh hai pr usme object ki length 0 hai toh 
 
-        return next(new ErrorHandler("Profile Image Required", 400));
-    }
-
-
-    const { profileImage } = req.files;
+    //     return next(new ErrorHandler("Profile Image Required", 400));
+    // }
 
 
-    const allowedFormats = ["image/png", "image/jpeg", "image/webp"];
+    // const { profileImage } = req.files;
 
 
-    if (!allowedFormats.includes(profileImage.mimetype)) {
-        return next(new ErrorHandler("File Format is not supported", 400));
-    }
+    // const allowedFormats = ["image/png", "image/jpeg", "image/webp"];
+
+
+    // if (!allowedFormats.includes(profileImage.mimetype)) {
+    //     return next(new ErrorHandler("File Format is not supported", 400));
+    // }
 
 
     // Getting the text type data from request
@@ -45,15 +45,15 @@ export const register = catchAsyncErrors(async (req, res, next) => {
 
 
     // User ki profile cloudinary pe upload krwa dete hain
-    const cloudinaryResponse = await cloudinary.uploader.upload(profileImage.tempFilePath, {
-        folder: "SYNCORA_USERS"
-    });
+    // const cloudinaryResponse = await cloudinary.uploader.upload(profileImage.tempFilePath, {
+    //     folder: "SYNCORA_USERS"
+    // });
 
 
-    if (!cloudinaryResponse || cloudinaryResponse.error) {
-        console.error("Cloudinary error : ", cloudinaryResponse.error || "Unknown Cloudinary Error");
-        return next(new ErrorHandler("Failed to upload profile image", 500));
-    }
+    // if (!cloudinaryResponse || cloudinaryResponse.error) {
+    //     console.error("Cloudinary error : ", cloudinaryResponse.error || "Unknown Cloudinary Error");
+    //     return next(new ErrorHandler("Failed to upload profile image", 500));
+    // }
 
     // If we reached here mtlb abhi tak koi error nhi aaya hai and user ne apni saari details bhar di hain
 
@@ -66,10 +66,10 @@ export const register = catchAsyncErrors(async (req, res, next) => {
         age,
         firstname,
         lastname,
-        profileImage: {
-            public_id: cloudinaryResponse.public_id,
-            url: cloudinaryResponse.secure_url
-        },
+        // profileImage: {
+        //     public_id: cloudinaryResponse.public_id,
+        //     url: cloudinaryResponse.secure_url
+        // },
     });
 
 
@@ -79,7 +79,14 @@ export const register = catchAsyncErrors(async (req, res, next) => {
     //     message: "User registered successfully"
     // });
 
-    generateToken(user, "User registered successfully", 201, res);
+    // generateToken(user, "User registered successfully", 201,res);
+
+    res.redirect('home');
+} catch(e) {
+    console.log(e.message);
+    res.redirect('/register');
+}
+    
 });
 
 export const login = catchAsyncErrors(async(req,res,next)=>{
@@ -103,7 +110,9 @@ export const login = catchAsyncErrors(async(req,res,next)=>{
     }
 
     // Now user logged in successfully toh token generate karado
-    generateToken(user, "Logged in successfully", 200, res);
+    // generateToken(user, "Logged in successfully", 200, res);
+
+    res.redirect('home');
 });
 
 export const logout = catchAsyncErrors(async(req,res,next)=>{
