@@ -11,12 +11,20 @@ import { SymptomSolution } from './models/symptomSolutionSchema.js';
 import path from "path";
 import { fileURLToPath } from "url";
 import ejsMate from 'ejs-mate';
+import passport from 'passport';
+import LocalStratergy from 'passport-local';
+import session from 'express-session';
+import flash from "connect-flash";
+import { User } from './models/userSchema.js';
+
 
 // Simulate __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
+config ({
+    path : "./config/config.env",
+});
 
 
 const app = express();
@@ -42,29 +50,61 @@ app.use(
 
 }));
 
-app.use('/api/v1/user', userRoute);
+// Main route
+app.get('/', (req,res)=>{
+    res.render("intro");
+})
 
-app.use('/', userRoute);
+// Express session
+
+const sessionOptions = {
+    secret: "mysecretkeythatnooneknowsabout", // Replace with a secure secret
+    resave: false,             // Prevents resaving unchanged sessions
+    saveUninitialized: false,  // Does not save uninitialized sessions
+    cookie: {  
+        expires : Date.now() + 7 *24* 60* 60 * 1000,               
+        maxAge:7 *24* 60* 60 * 1000,  
+        httpOnly: true, 
+    }
+}
+app.use(session(sessionOptions));
+
+//Connect Flash
+app.use(flash());
+
+// using passport
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStratergy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// Calling middleware for flash
+app.use((req,res,next)=>{
+    res.locals.success = req.flash("success");
+    res.locals.error = req.flash("error");
+    res.locals.currUser = req.user;
+    console.log("main yahan 1")
+    next();
+});
+
+
 
 app.set("view engine", 'ejs');
 app.set("views", path.join(__dirname, "views"));
 
-// app.engine("ejs", ejsMate);
+app.engine("ejs", ejsMate);
 
 connection();
 app.use(errorMiddleware);
 
-config ({
-    path : "./config/config.env",
-});
 
-app.get('/', (req, res) => {
-    res.render("intro")
-});
 
-app.get('/home', (req, res) => {
-    res.render("home")
-});
+
+app.use('/', userRoute); 
+
+
 
 app.get('/readmore', (req, res) => {
     res.render("readmore");
@@ -93,9 +133,12 @@ app.get('/symptoms', async (req, res) => {
 });
 
 app.get("/symptoms/:id", async (req, res) => {
-    console.log("under get request");
     let { id } = req.params;
     const symptom = await SymptomSolution.findById(id);
+    if(!symptom) {
+        req.flash("error", "This is symptom is not in our website");
+        res.redirect("features/symptom");
+    }
     res.render("features/show", { symptom });
 });
 

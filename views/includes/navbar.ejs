@@ -12,7 +12,10 @@
           <a class="nav-link" aria-current="page" href="/home">Home</a>
           <a class="nav-link" href="/services">Services</a>
           <a class="nav-link" href="/aboutus">About Us</a>
-          <!-- <a class="nav-link" href="/logout">Logout</a> -->
+          <% if(currUser) { %>
+            <a class="nav-link" href="/logout">Logout</a>
+           <% } %>
+          
         </div>
       </div>
     </div>
