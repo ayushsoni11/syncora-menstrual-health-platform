@@ -8,10 +8,11 @@
 }
 
 :root {
-    --bgpurple: #ac7cf4;
+    --bgpurple : rgb(133, 118, 235);
     --bgpink: #F8E7FC;
     --textblack: rgb(10, 10, 10);
-    --textpurple: purple;
+    /* --textpurple: purple; */
+    --textpurple : rgb(133, 118, 235);
     --textwhite: white;
     --text-font: "Outfit", sans-serif;
 }
@@ -31,12 +32,22 @@ section {
     gap : 100px;
     margin-top : 10rem;
     max-width: 100%;
+    margin-bottom : 10rem;
 }
 
-section img{
-    width : 500px;
-    border-radius: 50%;
+.img-box-left img{
+   width : 500px;
+    height : 500px;
+    border-radius: 0px 50% 0px 0px ;
+    object-fit: cover;
 }
+
+.img-box-right img{
+    width : 500px;
+     height : 500px;
+     border-radius: 50% 0px 0px 0px ;
+     object-fit: cover;
+ }
 
 section div h1{
     font-size: 70px;

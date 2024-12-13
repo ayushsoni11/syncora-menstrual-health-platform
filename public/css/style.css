@@ -1,8 +1,13 @@
 :root {
-    --bgpurple: #ac7cf4;
+    --bgpurple : rgb(133, 118, 235);
     --bgpink: #F8E7FC;
     --textblack: rgb(10, 10, 10);
-    --textpurple: purple;
+    --textpurple : rgb(133, 118, 235);
+    --cardcolor : linear-gradient(
+          rgba(150, 132, 241, 0.9),
+          rgba(159, 148, 229, 0.5),
+          rgba(225, 77, 156, 0.7)
+        );
     --textwhite: white;
     --text-font: "Outfit", sans-serif;
 }
@@ -20,11 +25,10 @@ body .container{
 
 /* navbar page */
 
-/* General styles for the navigation bar */
 .navbar {
-    background-color: var(--bgpurple);/* Light background for navbar */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    padding: 0.5rem 1rem; /* Padding for content */
+    background-color: var(--bgpurple);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem; 
     transition: background-color 0.3s ease;
     height : 7rem;
 }
@@ -32,12 +36,12 @@ body .container{
 .navbar.sticky-top {
     position: sticky;
     top: 0;
-    z-index: 1020; /* Ensure navbar stays on top */
+    z-index: 1020; 
 }
 
 .navbar-brand {
     display: flex;
-    align-items: center; /* Align logo vertically */
+    align-items: center;
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -48,12 +52,12 @@ body .container{
 .navbar-brand img {
     margin-right: 0.5rem;
     transition: transform 0.3s ease;
-    filter: drop-shadow(10px 10px 20px rgba(255, 255, 255, 0.5));
+   
     
 }
 
 .navbar-brand:hover img {
-    transform: scale(1.1); /* Slight zoom effect on logo */
+    transform: scale(1.01); 
 }
 
 .navbar-toggler {
@@ -72,12 +76,12 @@ body .container{
 }
 
 .collapse.navbar-collapse {
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: flex-end;
 }
 
 .navbar-nav {
     display: flex;
-    gap: 1rem; /* Space between nav links */
+    gap: 1rem; 
 }
 
 .nav-link {
@@ -114,17 +118,6 @@ body .container{
     }
 }
 
-
-/* .navbar {
-    background-color: var(--bgpurple);
-    opacity: 100%;
-    height: 80px;
-}
-
-.nav-link {
-    color: var(--textcolor1) !important;
-} */
-
 .footer {
     background-color: var(--bgpurple);
     display: flex;
@@ -151,40 +144,112 @@ body .container{
     text-decoration: underline;
 }
 
-/* Home page css */
-.card-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding-bottom: 30px;
-    margin: 30px;
+/* Flash page css */
+.success-flash, .success-flash button{
+    background-color: var(--bgpurple)  !important;
+    opacity : 0.7;
+    transition: 0.5s all ease;
+    color : var(--textwhite) !important;
 }
 
-.card {
-    background-color: var(--bgpurple) !important;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.error-flash {
+    background-color: pink !important;
+    opacity : 0.7;
+    transition: 0.5s all ease;
+    color : var(--textblack) !important;
+}
+
+
+
+
+
+/* Home page css */
+
+.header {
+    text-align: center;
+}
+.header h1 {
+    font-size: 3rem;
+    color: var(--textpurple);
+}
+.header p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--textblack);
+}
+.quote {
+    font-size: 2.5rem;
+    color: var(--textpurple);
+    margin: 1rem 0;
     text-align: center;
 }
 
-.card .btn {
-    position: absolute;
-    bottom: 20px;
+
+.card-container{
+    display : flex;
+    flex-direction: row;
+    gap : 20px;
+    padding-bottom : 30px;
+    margin : 30px;
+}
+
+.card-container .home-card {
+    background: var(--cardcolor) !important;
+    opacity : 0.9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+    text-align: center;
+    gap : 20px;
+    border-radius: 10px 10px 10px 10px;
+    width : 18rem;
+    
+    
+}
+.card-container .home-card:hover{
+    opacity : 1;
 }
 
 
-/* Symptom based solutions page */
+.home-card img {
+    border-radius : 10px 10px 0px 0px;
+    padding : 5px;
+    object-fit : cover;
+    height: 180px;
+}
 
+.home-card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    position: relative;
+}
 
+.home-card .card-body h5{
+    font-size: 25px;
+    margin-bottom : 5px;
 
-/* read more ejs template page
-.content {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden scroll;
-} */
+}
+
+.home-card .card-body h5 :hover {
+    background-color: var(--bgpink);
+}
+
+.symptom-card .card-body h5{
+    font-size : 23px;
+    margin-top : 2px;
+}
+
+.home-card .card-body a {
+    background-color: var(--textpurple);
+    width:50%;
+    text-align: center;
+    border : none;
+}
 
 
 /* Register.ejs page */
@@ -195,13 +260,15 @@ body .container{
     width: 70vw;
     background: linear-gradient(67deg,pink, #ac7cf4);
     border-radius: 20px;
-    /* border: 10px solid #995cf4; */
     margin:auto;
     height: 80vh;
     margin-bottom: 30px;
 
 }
 
+.signup-box{
+    margin-bottom: 50px;
+}
 .form-image{
     width : 30vw;
     height : 80vh;
@@ -222,15 +289,13 @@ body .container{
     width : 80%;
     height: 90%;
     position : relative;
-    
-    /* background-color: black; */
     padding : 3rem;
 }
 
 .register-form .form-box{
     width : 210%;
     margin-bottom : 10px;
-    /* background-color: aqua; */
+
 }
 
 .register-form .label-box{
@@ -245,7 +310,7 @@ body .container{
     border-radius : 20px;
     padding : 20px;
     border: none;
-    /* background-color: peru; */
+
 }
 
 .register-form .submit-btn {
@@ -266,31 +331,7 @@ body .container{
     color : var(--textblack);
 }
 
-/* Symptom-show.ejs */
 
-/* .sol-heading {
-    font-size : 30px;
-    color : var(--textpurple);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-    padding : 10px;
-}
-.ul-box {
-    display : flex;
-    flex-direction: column;
-    gap : 40px;
-}
-
-.li-box{
-    background: linear-gradient(67deg, pink , #ac7cf4);
-    padding : 20px;
-    border: none;
-    border-radius: 30px;
-    list-style-type: none;
-
-} */
 
 
 

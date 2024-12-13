@@ -1,6 +1,7 @@
 const sampleSolution = [
   {
     "symptom": "Headache",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkvvCHf8_f37RTeSjpk_QNe2t4-FtCOTk6KOgwxyxnjj5cuPVZlE5EnvKFJGEIRQEvwTo&usqp=CAU",
     "solutions": {
       "yoga": [
         {
@@ -98,6 +99,7 @@ const sampleSolution = [
 
   {
     "symptom": "Heavy Flow",
+    "image": "https://drdeepikadoshi.com/wp-content/uploads/2021/09/Period-problems-and-Heavy-Bleeding.jpg",
     "solutions": {
       "yoga": [
         {
@@ -194,6 +196,7 @@ const sampleSolution = [
 
   {
     "symptom": "Cramps",
+    "image": "https://media.istockphoto.com/id/1361836337/vector/menstrual-pain-sad-woman-with-abdominal-cramps-or-pms-symptoms-female-critical-day-problems.jpg?s=612x612&w=0&k=20&c=C-I1l1LW_pv7Sm5gkXxfrxv57OFc9BgBOPVvKSf2Y34=",
     "solutions": {
       "yoga": [{
         "name": "Supine Twist",
@@ -284,6 +287,7 @@ const sampleSolution = [
 
   {
     "symptom": "Bloating",
+    "image": "https://thumbs.dreamstime.com/b/young-woman-experiencing-flatulence-bloat-vector-illustration-female-suffering-gastritis-symptom-like-meteorism-concept-193913143.jpg",
     "solutions": {
       "yoga": [{
         "name": "Bridge Pose (Setu Bandhasana)",
@@ -373,7 +377,422 @@ const sampleSolution = [
   },
 
 
-  
+  {
+    "symptom": "Breast Tenderness",
+    "image": "https://blog.shyaway.com/wp-content/uploads/2020/07/Breast-Pain-Due-to-Injuries.jpg",
+    "solutions": {
+      "yoga": [
+        {
+          "name": "Cat-Cow Pose",
+          "benefits": ["Enhances blood circulation", "Relieves tension in the chest and back muscles"],
+          "howToDo": "Start on all fours, inhale as you arch your back (Cow), and exhale as you round your back (Cat).",
+          "whenToDo": "Morning or before bedtime",
+          "image": "https://th.bing.com/th/id/OIP.G4hTF3KZNfAc_U86YeU9egHaHa?w=168&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+
+
+        },
+        {
+          "name": "Bridge Pose",
+          "benefits": ["Improves chest muscle strength", "Relieves discomfort in the upper body"],
+          "howToDo": "Lie on your back, bend your knees, place your feet flat on the floor, and lift your hips upward.",
+          "whenToDo": "Morning or after stretching",
+          "image": "https://th.bing.com/th/id/OIP.B2CO5O_Ii_ddy9GoyiXrwQHaE8?w=280&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+
+
+        }
+      ],
+      "diet": {
+        "eat": [
+          {
+            "item": "Flaxseeds",
+            "benefits": ["Rich in omega-3 fatty acids", "Helps regulate hormonal imbalances"],
+            "quantity": "1-2 tablespoons daily",
+            "image": "https://th.bing.com/th/id/OIP.ElvQ5Yt6E-vv7WAw-R0hNAHaE7?w=230&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          },
+          {
+            "item": "Leafy Greens",
+            "benefits": ["High in magnesium and calcium", "Helps reduce inflammation"],
+            "quantity": "1-2 cups daily",
+            "image": "https://th.bing.com/th/id/OIP.Ki4ZIKVVJIadDVYWlVCCfgHaEK?w=287&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+
+
+          }
+        ],
+        "avoid": [
+          {
+            "item": "Salty Foods",
+            "reasons": ["Increase water retention, leading to more tenderness"],
+            "image": "https://th.bing.com/th/id/OIP.Rq6kYGkvNUdcKYn6VV-DbgHaEO?w=300&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          },
+          {
+            "item": "Caffeine",
+            "reasons": ["May exacerbate sensitivity in some individuals"],
+            "image": "https://th.bing.com/th/id/OIP.6n0MbQBRQPyALZEisOYpzQHaFJ?w=285&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+
+
+          }
+        ]
+      },
+      "homeRemedies": [
+        {
+          "remedy": "Warm Compress",
+          "ingredients": ["Warm water", "Clean cloth"],
+          "preparation": "Soak the cloth in warm water, wring out excess, and place it gently on the breasts for 10-15 minutes.",
+          "benefits": ["Relieves pain", "Relaxes muscles"],
+          "image": "https://th.bing.com/th/id/OIP.Sg3NsDGC49dFoo1dieLQSwHaHa?w=165&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+          "remedy": "Massage with Coconut Oil",
+          "ingredients": ["Coconut oil or olive oil"],
+          "preparation": "Warm the oil slightly and gently massage in circular motions.",
+          "benefits": ["Improves circulation", "Relieves discomfort"],
+          "image": "https://th.bing.com/th/id/OIP.WsKh0_r1iAljSkpdtDTKJwHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        }
+      ],
+      "otcMedications": [
+        {
+          "name": "Ibuprofen",
+          "usage": "Take 200-400mg every 4-6 hours with food as needed for pain relief.",
+          "sideEffects": ["Upset stomach", "Dizziness"],
+          "image": "https://th.bing.com/th/id/OIP.ihjeR0Uo0H1DzGi_MgGFZAHaFj?w=238&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+
+
+        },
+        {
+          "name": "Acetaminophen (Paracetamol)",
+          "usage": "Take 500mg every 6 hours as needed for pain relief.",
+          "sideEffects": ["Nausea", "Drowsiness"],
+          "image": "https://th.bing.com/th/id/OIP.CJNpn1bkheoiL949yEQDEAHaHT?w=176&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        }
+      ],
+      "herbalTreatments": [
+        {
+          "herb": "Evening Primrose Oil",
+          "benefits": ["Contains gamma-linolenic acid (GLA) to reduce tenderness"],
+          "preparation": "Take 500mg as a supplement, or as directed by a healthcare professional.",
+          "precautions": ["Consult a doctor if on blood thinners"],
+          "image": "https://th.bing.com/th/id/OIP.3F-vhtW0qQKefjh6ENw0zgHaE8?w=274&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+          "herb": "Chasteberry (Vitex)",
+          "benefits": ["Helps balance hormones", "Reduces premenstrual breast pain"],
+          "preparation": "Take as a tea or supplement (standard dose: 20-40mg daily).",
+          "precautions": ["Avoid if pregnant or taking hormonal medications"],
+          "image": "https://th.bing.com/th/id/OIP.SKKzB8xBriMEvJ38DCp-owHaHa?w=163&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        }
+      ]
+    }
+  },
+
+  {
+    "symptom": "Back Pain",
+    "image": "https://www.shutterstock.com/image-vector/suffering-chronic-back-pain-concept-600nw-2071984802.jpg",
+    "solutions": {
+      "yoga": [
+        {
+          "name": "Cat-Cow Stretch",
+          "benefits": ["Increases spinal flexibility", "Relieves tension in the lower back", "Improves posture"],
+          "howToDo": "Start on your hands and knees, alternate arching (Cow) and rounding (Cat) your back in a slow, controlled manner.",
+          "whenToDo": "Morning or during breaks from sitting",
+          "image": "https://th.bing.com/th/id/OIP.G4hTF3KZNfAc_U86YeU9egHaHa?w=168&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+          "name": "Child's Pose",
+          "benefits": ["Stretches the back, hips, and thighs", "Relieves tension in the lower back", "Promotes relaxation"],
+          "howToDo": "Kneel on the floor, stretch your arms forward, and rest your forehead on the ground while keeping your back elongated.",
+          "whenToDo": "After a long day of sitting or exercising",
+          "image": "https://th.bing.com/th/id/OIP.T6ykuzZk96xfsvztUCVQwAHaE8?w=242&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        }
+      ],
+      "diet": {
+        "eat": [
+          {
+            "item": "Leafy Greens",
+            "benefits": ["Rich in calcium and magnesium", "Supports muscle function and bone health", "Reduces muscle cramps"],
+            "quantity": "1-2 servings daily",
+            "image": "https://th.bing.com/th/id/OIP.Ki4ZIKVVJIadDVYWlVCCfgHaEK?w=287&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+
+          },
+          {
+            "item": "Salmon",
+            "benefits": ["Rich in omega-3 fatty acids", "Reduces inflammation", "Supports overall joint and muscle health"],
+            "quantity": "2-3 servings per week",
+            "image": "https://th.bing.com/th/id/OIP.GbD6JD48Iy5rYYwLn0qtygHaE8?w=225&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          }
+        ],
+        "avoid": [
+          {
+            "item": "Excessive Caffeine",
+            "reasons": ["May increase muscle tension", "Can lead to dehydration, which exacerbates muscle spasms"],
+            "image": "https://th.bing.com/th/id/OIP.ce_JIywivwMUs0rBT1w9iAHaFQ?w=216&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          },
+          {
+            "item": "Processed Foods",
+            "reasons": ["Contains unhealthy fats and additives that may increase inflammation", "Can contribute to weight gain, which strains the back"],
+            "image": "https://th.bing.com/th/id/OIP.94vTgR2nUD7-zttnyF0PRgHaEK?w=320&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          }
+        ]
+      },
+      "homeRemedies": [
+        {
+          "remedy": "Epsom Salt Bath",
+          "ingredients": ["Epsom salt", "Warm water"],
+          "preparation": "Add 2 cups of Epsom salt to warm water, and soak for 15-20 minutes.",
+          "benefits": ["Helps reduce muscle soreness", "Relieves inflammation in the back muscles"],
+          "image": "https://th.bing.com/th/id/OIP.KNuojG_Q_3SUINp61mOOOAHaHa?w=201&h=201&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+          "remedy": "Hot and Cold Compress",
+          "ingredients": ["Ice pack", "Heating pad"],
+          "preparation": "Apply an ice pack for 20 minutes to reduce inflammation and a heating pad for 20 minutes to relax the muscles.",
+          "benefits": ["Reduces inflammation and swelling", "Relaxes muscles and improves circulation"],
+          "image": "https://th.bing.com/th/id/OIP.oeeWt5m0aegsZlFzRG0bXQHaHa?w=191&h=191&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        }
+      ],
+      "otcMedications": [
+        {
+          "name": "Acetaminophen (Tylenol)",
+          "usage": "Take 500-1000mg every 4-6 hours as needed for pain relief, not exceeding 4000mg per day.",
+          "sideEffects": ["Liver damage if overused", "Stomach upset"],
+          "image": "https://th.bing.com/th/id/OIP.TxCAOYyvmi65JN5WwM9VBgAAAA?w=197&h=197&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+          "name": "Ibuprofen (Advil, Motrin)",
+          "usage": "Take 200-400mg every 4-6 hours with food for pain and inflammation relief.",
+          "sideEffects": ["Upset stomach", "Increased blood pressure", "Kidney irritation with prolonged use"],
+          "image": "https://th.bing.com/th/id/OIP.ihjeR0Uo0H1DzGi_MgGFZAHaFj?w=238&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        }
+      ],
+      "herbalTreatments": [
+        {
+          "herb": "Turmeric (Curcumin)",
+          "benefits": ["Reduces inflammation", "Promotes joint health", "Relieves pain from muscle strains"],
+          "preparation": "Consume turmeric in food, smoothies, or as a supplement.",
+          "precautions": ["Consult with a healthcare provider if on blood thinners", "Avoid large doses to prevent digestive issues"],
+          "image": "https://th.bing.com/th/id/OIP.CD18Z_3T671iLhg0RGv1lgHaFM?w=239&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+          "herb": "Arnica",
+          "benefits": ["Reduces bruising", "Soothes muscle and joint pain", "Promotes healing of soft tissue injuries"],
+          "preparation": "Apply arnica gel or cream directly to the affected area.",
+          "precautions": ["Avoid applying to broken skin", "May cause skin irritation in sensitive individuals"],
+          "image": "https://th.bing.com/th/id/OIP.KcU64EEyHUTKb0ZP6RaE7QHaHa?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        }
+      ]
+    }
+  },
+
+  {
+    "symptom": "Mood Swings",
+    "image": "https://as1.ftcdn.net/v2/jpg/04/93/11/18/1000_F_493111873_WkONVudyrkeW3lKhmzTKxl1CcbSV2LAk.jpg",
+    "solutions": {
+      "yoga": [
+        {
+          "name": "Child's Pose",
+          "benefits": ["Calms the mind", "Relieves stress"],
+          "howToDo": "Kneel on the floor, stretch your arms forward, and rest your forehead on the ground.",
+          "whenToDo": "Morning or evening",
+          "image": "https://example.com/childs-pose.jpg"
+        },
+        {
+          "name": "Bridge Pose",
+          "benefits": ["Balances emotions", "Improves blood flow to the brain"],
+          "howToDo": "Lie on your back, bend your knees, and lift your hips while keeping your shoulders grounded.",
+          "whenToDo": "Before bed or during a calm time of day",
+          "image": "https://example.com/bridge-pose.jpg"
+        }
+      ],
+      "diet": {
+        "eat": [
+          {
+            "item": "Dark Chocolate",
+            "benefits": ["Boosts serotonin levels", "Improves mood"],
+            "quantity": "1-2 small squares daily",
+            "image": "https://example.com/dark-chocolate.jpg"
+          },
+          {
+            "item": "Walnuts",
+            "benefits": ["Rich in omega-3s", "Supports brain health"],
+            "quantity": "5-6 walnuts daily",
+            "image": "https://example.com/walnuts.jpg"
+          }
+        ],
+        "avoid": [
+          {
+            "item": "Sugary Foods",
+            "reasons": ["Causes blood sugar spikes and crashes", "Leads to mood instability"],
+            "image": "https://example.com/sugary-foods.jpg"
+          },
+          {
+            "item": "Caffeine",
+            "reasons": ["Can increase anxiety and mood fluctuations"],
+            "image": "https://example.com/caffeine.jpg"
+          }
+        ]
+      },
+      "homeRemedies": [
+        {
+          "remedy": "Lavender Tea",
+          "ingredients": ["Dried lavender", "Hot water"],
+          "preparation": "Steep 1 teaspoon of dried lavender in hot water for 5-7 minutes.",
+          "benefits": ["Promotes relaxation", "Reduces mood swings"],
+          "image": "https://example.com/lavender-tea.jpg"
+        },
+        {
+          "remedy": "Aromatherapy with Essential Oils",
+          "ingredients": ["Lavender oil or sandalwood oil"],
+          "preparation": "Add a few drops of essential oil to a diffuser and inhale the calming aroma.",
+          "benefits": ["Soothes the mind", "Balances emotions"],
+          "image": "https://example.com/aromatherapy.jpg"
+        }
+      ],
+      "otcMedications": [
+        {
+          "name": "St. John's Wort (Capsules)",
+          "usage": "Take 300mg daily, as directed on the packaging.",
+          "sideEffects": ["May interact with medications", "Potential sunlight sensitivity"],
+          "image": "https://example.com/st-johns-wort.jpg"
+        },
+        {
+          "name": "Magnesium Supplements",
+          "usage": "Take 200-400mg daily to support mood stability.",
+          "sideEffects": ["Upset stomach", "Diarrhea if overdosed"],
+          "image": "https://example.com/magnesium.jpg"
+        }
+      ],
+      "herbalTreatments": [
+        {
+          "herb": "Ashwagandha",
+          "benefits": ["Reduces stress", "Balances hormones"],
+          "preparation": "Take 1 teaspoon of ashwagandha powder mixed in warm milk or as a capsule.",
+          "precautions": ["Avoid during pregnancy", "Consult a doctor for dosage"],
+          "image": "https://example.com/ashwagandha.jpg"
+        },
+        {
+          "herb": "Chamomile",
+          "benefits": ["Calms the nervous system", "Improves mood"],
+          "preparation": "Steep chamomile flowers in hot water for 5-7 minutes.",
+          "precautions": ["Avoid if allergic to ragweed", "Do not overconsume"],
+          "image": "https://example.com/chamomile.jpg"
+        }
+      ]
+    }
+  },
+
+
+  {
+    "symptom": "Nausea",
+    "image" : "https://img.freepik.com/premium-vector/young-woman-suffers-from-nausea-abdominal-pain_593506-615.jpg?semt=ais_hybrid",
+    "solutions": {
+      "yoga": [
+        {
+          "name": "Cat-Cow Pose",
+          "benefits": ["Improves digestion", "Reduces abdominal discomfort"],
+          "howToDo": "Start on all fours, alternate between arching your back (cow pose) and rounding it (cat pose).",
+          "whenToDo": "Morning or when feeling mild nausea",
+          "image": "https://img.pica-ai.com/image/aigc/alg%26watermark%26p%260f5cf75063725f6e0fd0adfd17b298cd_1024_1024.webp"
+
+        },
+        {
+          "name": "Seated Twist",
+          "benefits": ["Stimulates digestion", "Eases bloating"],
+          "howToDo": "Sit with legs crossed, place one hand on the opposite knee, and twist gently to the side.",
+          "whenToDo": "After meals or when feeling queasy",
+          "image": "https://img.pica-ai.com/image/aigc/alg%26watermark%26p%26e15ab4c4aab989197bf936d9fb0a433a_1024_1024.webp"
+
+        }
+      ],
+      "diet": {
+        "eat": [
+          {
+            "item": "Ginger",
+            "benefits": ["Soothes the stomach", "Reduces nausea symptoms"],
+            "quantity": "1-2 small slices or 1 cup of ginger tea daily",
+            "image": "https://img.pica-ai.com/image/aigc/alg%26watermark%26p%26cf26bbded77589fbd1b410c8485cf0ba_1024_1024.webp"
+
+          },
+          {
+            "item": "Crackers",
+            "benefits": ["Absorbs stomach acid", "Provides easy-to-digest carbohydrates"],
+            "quantity": "3-5 crackers as needed",
+            "image": "https://media-hosting.imagekit.io//92042f5adf0c4e75/Crackers.jpg?Expires=1733823719&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=GuBEo3SNE-yHokiDNyVFUToGz9~NYg-W3OkJfo7nbpVigSJQqqA6FqWuGb1tn~mfzCQ33b774g3RaUivhbcj4O2AA-d9W2KsZaXuZ5w3h2oFe~8ynJMrjVfXLp00~hKWQ3BA5p8Ugwk3ZrZbyjSvm~VT44~kpbCDIquuHfxl6Bhh15smXfrWoU0ck1i-PYYk5nkeeE89ZkqjwJcVeyCgF8p4evqR-YcXQUhkGs0Pw1g2MPvWN-KCmmCH1y4nEBEwZxO7z49YsPOWa0KVXtHaOyolhSFV7vb2PXVvJ1bWjGXjv2FhMlTMNi6gMnINUbA-54J2LPZJY6oXNYHLEbLQYQ__"
+
+          }
+        ],
+        "avoid": [
+          {
+            "item": "Greasy Foods",
+            "reasons": ["Difficult to digest", "May worsen nausea"],
+            "image": "https://media-hosting.imagekit.io//3bad69eb7129443b/Greasy%20food.jpg?Expires=1733825024&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zKK~XfjZnzlTtol6tDStvn19gWPbjjVYadVO~0XnLucy27K12fuQujKyP6aQFVANrExozcXlIZHQT1O1~qSBlnGsC-lis03XnYAOSUsinQj532jXvDnpyO56Ermaaidqjm93X4JeyTLcW-m6eqrw3wgjY0pXP92fcBGAyG4e9dRlZpcCukOyup8pPmObzTLTGTkRAkAtq5MIkYyr11XlaqVEPJi2YV84TAD-qEOSqYSjUmKpTS-EhaIWPvY2SHR-WWP55gkWoQvfCxXG3g-2gh3Me92W7TMte6qqnzf-m8ABtTCr00S6nkhADZutyfJwTE9ntZ~eYudufRxUsDww7A__"
+
+          },
+          {
+            "item": "Spicy Foods",
+            "reasons": ["Irritates the stomach lining", "Can trigger nausea"],
+            "image": "blob:https://imagekit.io/7e3bec04-dd25-49cd-8dc9-b8a2ea42b775"
+          }
+        ]
+      },
+      "homeRemedies": [
+        {
+          "remedy": "Lemon Water",
+          "ingredients": ["Fresh lemon juice", "Warm water"],
+          "preparation": "Squeeze half a lemon into a glass of warm water and stir well.",
+          "benefits": ["Alleviates nausea", "Provides hydration"],
+          "image": "https://media-hosting.imagekit.io//940e8228661740aa/magicstudio-art%20(1).jpg?Expires=1733825179&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=bnq9ZgtSKUgSHmY4AGgWszskVLvwi8XfKwzy0HncSHXKWg1Cl8YX1zCMcAsZERICYMm62hVHZlXnYM0DPtrgvrC-7ItloLEbuf6Zbbe-Q8~8t0CSHt4I5cAhWjYdTNTHCXPRH~zYGmcxNHwlB8lopNWPDqCHqk9~bSBlFHacnJNVr2FoIOY8gNo04Vb1ovdyMEJxzNVfGL0JtY4FobTSztKwYGd5IyqvP5mAaV~vY7KOUpClAnBs5EAU19Afo3U1t0Xk-kEnokKhU1qROI8AxWg2Jl7uE-1ZHaWJh4qFMpdx4z1h4rnUUllo9aOgG19XGFHuC5WUcvzflcGIrCxvcA__"
+
+        },
+        {
+          "remedy": "Peppermint Tea",
+          "ingredients": ["Peppermint leaves or tea bag", "Hot water"],
+          "preparation": "Steep peppermint leaves or a tea bag in hot water for 5-10 minutes.",
+          "benefits": ["Calms the stomach", "Relieves nausea"],
+          "image": "blob:https://imagekit.io/05365fb8-a54b-4b23-8c39-23f0a0233da6"
+
+        }
+      ],
+      "otcMedications": [
+        {
+          "name": "Dimenhydrinate",
+          "usage": "Take 50mg every 4-6 hours as needed for nausea.",
+          "sideEffects": ["Drowsiness", "Dry mouth"],
+          "image": "https://media-hosting.imagekit.io//4462647bcda64286/magicstudio-art%20(3).jpg?Expires=1733825823&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=htELc6Hw1sZi0TI608lGoUHVhEdm7FuJnGlfU9TInNeKSPwVEUfu43ssUXWV7lHoHipvX~7Et-UnGsa3TJz8QzxhJW5GnwkzbPAGgJ1HUB3ElpV48acaYOAwfh7oQI8baX3hqqke6aHp62GkVy7raa15lvCSQni6hi4ca3Z9gV4hIkQkxrPia5Z-MessU9YiS6gddVOisl5HQCL~U2qFQor3W6Xz-aFIG93PCarXSAgcUXTTpsszp4fN~4hKa6M-KW-nJKKkUB1goufM2SSDh2RdejZUa5VOhAPFq4YR~HTveK0c2-2PBn~ifZyRPv04gERgU3CcWcUzwmaB9SiErA__"
+
+        },
+        {
+          "name": "Bismuth Subsalicylate",
+          "usage": "Take as directed on the packaging for upset stomach and nausea.",
+          "sideEffects": ["Black stool", "Darkened tongue"],
+          "image": "https://example.com/bismuth-subsalicylate.jpg"
+        }
+      ],
+      "herbalTreatments": [
+        {
+          "herb": "Chamomile Tea",
+          "benefits": ["Soothes the digestive system", "Reduces nausea"],
+          "preparation": "Steep dried chamomile flowers in hot water for 5-7 minutes.",
+          "precautions": ["Avoid if allergic to ragweed", "Consult a doctor if pregnant"],
+          "image": "https://media-hosting.imagekit.io//284c22c00b4a4f59/magicstudio-art%20(4).jpg?Expires=1733825907&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ijL7veIUtFI94Ug7F9e9-Zmgu45A-sVGgCCbVucVAJ1CJCTzaSYGEFr6xypFC7DirLQbk4a8CTiJ8XGbQihbUisLMRA8VaOFHZcFbBLpwMv7snzGbO5e6E5s-r5xVrO1Hfdw5v8RfmCQBam9F52bDzoalG~Pe7NqQx-9baf7FiQh~8LGdl-35icCJQjtGRLMXVODf~oD7crfbOhVYoN06tX8b2Y0vh72X9zZ8YuokSr8JIMAaCyz9bQ-b0M6sEYgq22s2MdArXOq9XbP9KT4oN-JBRIv1dAhmIrcCOxNkqoAgu3S9z7IwB7Xiy8gcpFUSrGziqP-FlLInq2CseGsTA__"
+
+        },
+        {
+          "herb": "Fennel Seeds",
+          "benefits": ["Eases stomach discomfort", "Reduces nausea"],
+          "preparation": "Chew on half a teaspoon of fennel seeds or steep them in hot water for tea.",
+          "precautions": ["Avoid excessive consumption", "Not recommended for those with fennel allergies"],
+          "image": "https://media-hosting.imagekit.io//0b1c07f8f595486a/magicstudio-art%20(5).jpg?Expires=1733826003&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=B83fuhPpeWBVYipAn7ei0oAf9WSjHFa~35hkdTtJ0zhUAt0QKwmOVoVKXb5uHkvH3S6OhP5FoHzOVgJ8TDj3vuMlJUv5GLfvhLrZ3Tukj4j0F0nFP0ag-fx~ZBeiNo8qvjFMthqu-LZe2QBHFkOxzUuStpdMMG6Ov1JxhkD5a8CWAQ~RVhjJjfQO0mehsX~7k4Ei10BK-D7S9YBbhzxJyK0i6xOj3jClo2haFAxI6~tFJkarLp~TnJ-Gowq8DmazL6WdcfT~b9QtQ4dHKNyQ2YwQ8700sozSHnl7VzoVoo2esbJxL1mTSE6hUSFxOWDsTczZXgdrJJ57lrrEuG6OcQ__"
+
+        }
+      ]
+    }
+  },
+
+
+
+
+
+
+
 
 
 

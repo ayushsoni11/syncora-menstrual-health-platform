@@ -1,15 +1,32 @@
-/* /* .heading {
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
 
-} 
 
-.heading h1{
-    font-size: 5rem;
-    color: black;
-} */
+:root {
+    /* --bgpurple: #ac7cf4; */
+    --bgpurple : rgb(133, 118, 235);
+    --bgpink: #F8E7FC;
+    --textblack: rgb(10, 10, 10);
+    --textpurple: rgb(133, 118, 235);
+    --cardcolor : linear-gradient(
+          rgba(150, 132, 241, 0.9),
+          rgba(159, 148, 229, 0.5),
+          rgba(225, 77, 156, 0.7)
+        );
+        /* --cardcolor: linear-gradient(120deg,
+        rgb(142, 119, 252),
+        rgba(253, 164, 212, 0.7),
+        rgba(159, 148, 229, 1)); */
+        /* --cardcolor : linear-gradient(90deg, rgba(238, 189, 238, 0.8) 0%, rgba(192, 188, 239, 0.8) 100%); */
+    /* --cardcolor :  linear-gradient(180deg, rgba(169, 154, 240, 0.6) 0%, #D4D0E9 42.1%, #FFFFFF 100%); */
+    --textwhite: white;
+    --text-font: "Outfit", sans-serif;
+}
 
+.form h1{
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color : var(--bgpurple);
+}
 #calendars {
     display: flex;
     flex-direction: row;
@@ -121,6 +138,36 @@
     border-radius: 5px;
 }
 
+.sign-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width : 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+
+}
+
+.sign-box div{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap : 20px;
+    justify-content: center;
+}
+.sign-box p {
+    font-size: 20px;
+}
+.guide {
+    width : 30px;
+    height: 30px;
+    border-radius: 10px;
+    border : 0.2px solid black;
+    
+}
+
 /* Responsive styling */
 @media (max-width: 768px) {
     #calendar {
@@ -136,10 +183,35 @@
 
 /* Feature 3 : Educational content css is here  */
 
-.carousel-item img{
-    width : 100%;
-    height : 500px;
+.carousel-item img {
+    width: 100vw !important;
+    height: 500px;
+    object-fit: cover;
 }
+
+.carousel-image-container {
+    position: relative;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+
+
 
 
 header {
@@ -154,84 +226,84 @@ header h1 {
     font-size: 2.5rem;
 }
 
-section {
-    padding: 30px;
-}
 
 
 
-.container h2{
-    font-size : 40px !important;
-    color : var(--textpurple);
+
+.articles-section .container h2,
+.facts-myths h2 {
+    font-size: 40px !important;
+    color: var(--textpurple);
     text-align: center;
+    margin-top: 50px;
 }
 
 
- .articles-section .container .card-container{
+.articles-section .container .card-container {
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
-    
-}
-/*
-.articles-section .container .card-container .card {
-    width: 30%;
+    justify-content: flex-start;
+    padding-left: 65px;
+   
 
 }
-*/
-.card:hover {
-    transform: translateY(-10px);
-}
 
-.card img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.card-container .card h3 {
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
-    color: #333;
-}
-
-.card-container .card p {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom : 5rem !important;
-}
-
-.card-container .card a .btn{
-    margin-top : 2rem;
-} */
-
-/* .video-container {
+.articles-section .container .card-container .article-card {
+    background: var(--cardcolor);
+    opacity : 0.8;
+    width: 30.33%;
+    height: 220px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-    background-color: red;
+    flex-direction: column;
+    
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap : 10px;
+    border-radius: 15px;
+}
+.articles-section .container .card-container .article-card:hover{
+    opacity : 1;
+}
+
+.articles-section .container .card-container .article-card a {
+    background-color: var(--bgpurple);
+    font-size: 30px;
+    border-radius: 15px;
+    width: 100%;
+    position: absolute;
+    bottom : 0;
+}
+
+.video-section .container h2, .questions-section .container h2{
+    font-size: 40px !important;
+    color: var(--textpurple);
+    text-align: center;
+    margin-top: 50px;
 }
 
 .video-card {
-    /* width: 48%; 
-    width : 300px;
-    height: 200px;
-    margin-bottom: 20px;
-}*/
-.video-card{
-    height : 200px;
+   
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+   
+    flex-wrap: wrap;
+    position : relative;
 }
 
-.video-card iframe{
+.video-card iframe {
     height: 200px !important;
-    
+    /* background-color: red; */
+   
+
 }
 
 .questions-section {
-    background-color: #e3e3e3;
+
     padding: 30px;
     border-radius: 10px;
 }
@@ -243,70 +315,255 @@ section {
     margin-bottom: 15px;
     padding: 15px;
 }
+
 .question p {
-    width : 100% !important;
+    width: 100% !important;
 }
 
-.question p a{
-    width : 100% !important;
+.question p a {
+    width: 100% !important;
     background-color: var(--textpurple) !important;
     font-size: 20px;
-    color : var(--textwhite) !important;
-}
-/* 
-.question h4 {
-    font-size: 1.2rem;
-    color: #333;
+    color: var(--textwhite) !important;
 }
 
-.question p {
-    font-size: 1rem;
-    color: #555;
-} */
+            
+.facts-myths {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
 
-.fact-myth-section {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 10px;
+.fact-myth-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.fact-myth-card {
-    width: 48%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
     margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.fact-myth-card h3 {
+.facts-myths .fact {
+    display: flex;
+    align-items: center;
+    color: #2D9C9A;
     font-size: 1.5rem;
-    color: #333;
+    padding: 10px;
+    background-color: #e0f7f7;
+    border-radius: 8px;
+    width: 48%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.fact-myth-card p {
-    font-size: 1rem;
-    color: #555;
+.facts-myths .myth {
+    display: flex;
+    align-items: center;
+    color: #D32F2F;
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: #fce4e4;
+    border-radius: 8px;
+    width: 48%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+.facts-myths .icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.fact:hover {
+    transform: scale(1.05);
+    background-color: #d1f5f2;
+}
+
+.myth:hover {
+    transform: scale(1.05);
+    background-color: #f9e1e1;
+}
+
+.facts-myths .fact:hover .icon, .myth:hover .icon {
+    transform: rotate(360deg);
+}
+
+.facts-myths .fact-myth-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
 
 .quote-section {
+
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.5s ease;
+}
+
+.quote-section .container {
+    max-width: 800px;
     text-align: center;
-    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
 .quote-section blockquote {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.5rem;
     font-style: italic;
-    padding: 15px;
-    border-left: 5px solid #ff6f61;
-    margin: 20px 0;
+    color: var(--bgpurple);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+    transform: translateY(20px);
 }
 
 .quote-section footer {
     font-size: 1rem;
-    color: #333;
+    color: #888;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeInText 2.5s forwards;
+    transform: translateY(20px);
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.quote-section .container:hover blockquote {
+    color: #2D9C9A;
+    transform: scale(1.1);
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.quote-section .container:hover footer {
+    color: #4A90E2;
+    transform: translateY(0px);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+
+
+
+/* 
+Community page css */
+.community-page {
+    text-align: center;
+    padding: 20px;
+    margin : 30px;
+}
+
+.message-container{
+    border-radius: 15px;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    animation: slideIn 1s ease-out;
+    background-color: var(--textwhite);
+}
+
+.message-container .message-block{
+    background-color: var(--textwhite);
+}
+
+/* Header Styling */
+.message-container .message-block h1 {
+   
+    font-size: 2rem;
+    color: var(--bgpurple);
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Paragraph Styling */
+.message-block p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.6;
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* List Styling */
+.message-block ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.message-block ul li {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #555;
+    animation: fadeIn 1.4s ease-out;
+}
+
+.message-block ul li:before {
+    content: "✔";
+    color: var(--bgpurple);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Hover Effect on Container */
+.message-container:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-out;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+} 
+
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

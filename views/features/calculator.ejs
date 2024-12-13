@@ -8,13 +8,13 @@
                 <h1 class="col-8 offset-3">Period Calculator</h1>
 
             <form id="period-form" action="">
-                <div class="mb-3">
+                <div class="mb-5">
                     <label class="form-label" for="start-date">Period Start Date:</label>
                     <input class="form-control" type="date" id="start-date" name="start_date" required>
                 </div>
 
                 <div class="row">
-                    <div class="mb-3 col-6">
+                    <div class="mb-5 col-6">
                         <label  for="cycle-length"
                             class="input form-label col pregnancy-calculator,period-calculator,ovulation-calculator,due-date-calculator">
                             <p class="input__title">Average Cycle Length</p>
@@ -97,7 +97,7 @@
                         </label>
                     </div>
     
-                    <div class="mb-3 col-6">
+                    <div class="mb-5 col-6">
                         <label for="period-duration"
                             class="input form-label col pregnancy-calculator,period-calculator,ovulation-calculator,due-date-calculator">
                             <p class="input__title">Last Period Length</p>
@@ -155,7 +155,23 @@
             <div id="result-1" class="calendar"></div>
             <div id="result-2" class="calendar"></div>
             <div id="result-3" class="calendar"></div>
+
         </div>
+
+        <div class="offset-3 sign-box">
+            <div>
+                <div class="guide pink-cell"></div>
+            <p>Period days</p>
+            </div>
+            
+            <div>
+                <div class=" guide green-cell"></div>
+                <p>Ovulation days</p>
+            </div>
+           
+        </div>
+
+        
 
         <script src="/js/calculator.js"></script>
     </body>

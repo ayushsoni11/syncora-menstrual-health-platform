@@ -142,5 +142,9 @@ app.get("/symptoms/:id", async (req, res) => {
     res.render("features/show", { symptom });
 });
 
+app.get('/community', async(req,res)=>{
+    res.render("features/community")
+})
+
 
 export default app;
