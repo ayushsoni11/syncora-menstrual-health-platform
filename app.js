@@ -99,12 +99,7 @@ app.engine("ejs", ejsMate);
 connection();
 app.use(errorMiddleware);
 
-
-
-
 app.use('/', userRoute); 
-
-
 
 app.get('/readmore', (req, res) => {
     res.render("readmore");
@@ -123,9 +118,20 @@ app.get('/education', (req,res)=>{
 })
 
 app.get('/symptoms', async (req, res) => {
+    console.log("4")
     try {
+        console.log("1")
         const allSymptoms = await SymptomSolution.find({});
+        console.log("Fetched Data:", allSymptoms);  
+        console.log("2")
+
+        if (!allSymptoms || allSymptoms.length === 0) {
+            console.log("No symptoms found in the database.");
+            return res.status(404).send("No symptoms found.");
+        }
+
         res.render("features/symptom", { allSymptoms }); // Correct usage
+        console.log("3")
     } catch (error) {
         console.error(error);
         res.status(500).send("Server Error");
@@ -145,6 +151,5 @@ app.get("/symptoms/:id", async (req, res) => {
 app.get('/community', async(req,res)=>{
     res.render("features/community")
 })
-
 
 export default app;

@@ -789,13 +789,6 @@ const sampleSolution = [
 
 
 
-
-
-
-
-
-
-
 ];
 
 export default { data: sampleSolution };
